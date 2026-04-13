@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In-house Facilities - GLOBSI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-link">
+      <div class="logo"><img src="image/download.svg" alt="GLOBSI India"></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="inhouse.html" class="nav-link">In-house</a></li>
+      <li><a href="csr.html" class="nav-link">CSR</a></li>
+      <li><a href="why.html" class="nav-link">Why GLOBSI</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="awards.html" class="nav-link">Awards</a></li>
+
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>In-house Manufacturing</h1>
+      <p>Advanced CNC Machining & Precision Facilities</p>
+    </div>
+  </section>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+
+      /* 🔥 IMAGE YAHAN ADD KIYA HAI */
+      background: url("https://media.istockphoto.com/id/541116798/photo/steel-frame-structure.jpg?s=612x612&w=0&k=20&c=lnusYKwWmyJYew8SFaQ2kZCp6MnffxKtzBtPVopsuu0=") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(195, 202, 214, 0),
+          rgba(150, 158, 174, 0));
+      top: 0;
+      left: 0;
+    }
+
+    /* Content */
+    .hero-content {
+      position: relative;
+      color: #fff;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    /* Heading */
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: #ff9800;
+    }
+
+    /* Subtitle */
+    .subtitle {
+      margin-top: 20px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* Description */
+    .desc {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    /* Button */
+    .hero-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #ff9800, #ffb74d);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(255, 152, 0, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      animation: fadeInHero 1.5s ease-out;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      animation: slideUpHero 1s 0.3s both ease-out;
+    }
+
+    .hero-lead {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+      animation: slideUpHero 1s 0.6s both ease-out;
+    }
+
+    .cta-group {
+      animation: slideUpHero 1s 0.9s both ease-out;
+    }
+
+    /* Animations */
+
+    @keyframes fadeInHero {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUpHero {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+
+  <!-- MACHINES -->
+  <section class="section">
+
+
+
+    <div class="machining-container">
+      <div class="machining-text">
+        <h3 class="sub-title">
+          <span class="arrow">➤</span> Machining & Bar Cutting Facilities
+        </h3>
+        <ul class="cap-list">
+          <li>1.CNC Turning machine: Jober xl 200mm & Lm 200mm Dia chuck between center 400mm, Make: Ace micromatic Mfg
+            year: 2018.</li>
+          <li>2.CNC Turning Machine : LMW Smart turn 165 mm ChuckDia</li>
+          <li>3.VMC Machines : Agma make Size 1600X700x600mm</li>
+          <li>4.Bar Cutting Machines : 400mm dia cutting Capacity.</li>
+          <li>5. Nos producing high-quality and precision components.</li>
+        </ul>
+      </div>
+      <div class="machining-image">
+        <img src="image/in.png" alt="Machining & Bar Cutting Facilities">
+      </div>
+    </div>
+
+
+    <h3><span class="arrow">➤</span> Heat Treatment Unit
+    </h3>
+
+    <div class="machining-container">
+      <div class="machining-text">
+        <h3 class="sub-title">Roller Hearth Furnace:</h3>
+        <p>Have a quenching speed of less than 25 seconds. It is also designed to cater to customer requirements for the
+          heat treatment of round bars up to 250 mm in diameter and 6.5 meters in length.</p>
+        <p><strong>Specification & Description -</strong><br>No. of Furnaces: 1</p>
+      </div>
+      <div class="machining-image">
+        <img src="image/in2.png" alt="Roller Hearth Furnace">
+      </div>
+    </div>
+
+    <div class="machining-container">
+      <div class="machining-text">
+        <h3><span class="arrow">➤</span> Heat Treatment Unit
+        </h3>
+        <ul class="cap-list">
+          <li>
+            Bogie Hearth Furnace:</li>
+          <p>Wire rods, components and complex shapes in bulk quantities are heat-treated</p>
+          <p>at this facility</p>
+          <p>Specification & Description-</p>
+          <p>No. of Furnaces 2</p>
+          <p>Furnace type Bogie Hearth type</p>
+        </ul>
+      </div>
+      <div class="machining-image">
+        <img src="image/in3.png" alt="Machining & Bar Cutting Facilities">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- LEFT -->
+      <div class="footer-col">
+        <h3>GLOBSI India</h3>
+        <p>
+          Premium quality tool steels & engineering solutions for global markets.
+          Committed to excellence in every project.
+        </p>
+
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="inhouse.html">In-house</a></li>
+          <li><a href="why.html">Why Us</a></li>
+        </ul>
+      </div>
+
+      <!-- MORE -->
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+
+        <p>
+          📍 Bramha Sky Uzuri, A-318 <br>
+          Pimpri, Pune - 411018
+        </p>
+
+        <p>📞 +91-9067022279</p>
+        <p>📧 ved.tiwari@globsiindia.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2021 GLOBSI India Sourcing. All rights reserved.| <a href="#intro" style="color: #f1dada;">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/919270722279?text=Hello%20GLOBSI%20Team%2C%20I%20have%20a%20query..." class="whatsapp-float"
+    target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 1.181 1 0020.885 3.488" />
+    </svg></a>\n\n
+  <script src="js/script.js"></script>
+</body>
+
+</html>
