@@ -4,170 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>In-house Facilities - GLOBSI</title>
+  <title>GLOBSI India Sourcing | Globalprocurement & supply partner</title>
+  <meta name="description"
+    content="Corporate-grade tool steels, high-performance alloys, and global supply chain solutions. Trusted by industry leaders worldwide.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 
-</head>
-
-<body>
-
-  <header class="navbar">
-    <a href="index.html" class="logo-link">
-      <div class="logo"><img src="image/download.svg" alt="GLOBSI India"></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="inhouse.html" class="nav-link">In-house</a></li>
-      <li><a href="csr.html" class="nav-link">CSR</a></li>
-      <li><a href="why.html" class="nav-link">Why GLOBSI</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
-      <li><a href="awards.html" class="nav-link">Awards</a></li>
-
-    </ul>
-    <div class="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </header>
-
-  <!-- TITLE -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>In-house Manufacturing</h1>
-      <p>Advanced CNC Machining & Precision Facilities</p>
-    </div>
-  </section>
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    /* Corporate Design System */
+    :root {
+      --corporate-primary: #0B1F3A;
+      --corporate-accent: #F97316;
+      --corporate-bg: #F8FAFC;
+      --corporate-surface: #FFFFFF;
+      --corporate-muted: #64748B;
+      --corporate-border: #E2E8F0;
+      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
-    /* Hero Section */
-    .hero {
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--corporate-bg);
+    }
+
+    /* Hero */
+    .corporate-hero {
       position: relative;
-      height: 100vh;
-
-      /* 🔥 IMAGE YAHAN ADD KIYA HAI */
-      background: url("https://media.istockphoto.com/id/541116798/photo/steel-frame-structure.jpg?s=612x612&w=0&k=20&c=lnusYKwWmyJYew8SFaQ2kZCp6MnffxKtzBtPVopsuu0=") center/cover no-repeat;
-
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      color: white;
+      overflow: hidden;
     }
 
-    /* Overlay */
-    .overlay {
+    .corporate-hero::before {
+      content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(195, 202, 214, 0),
-          rgba(150, 158, 174, 0));
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(11, 31, 58, 0.6), rgba(11, 31, 58, 0.8));
+      z-index: 1;
     }
 
-    /* Content */
-    .hero-content {
-      position: relative;
-      color: #fff;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    /* Heading */
-    .hero h1 {
-      font-size: 60px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .hero h1 span {
-      color: #ff9800;
-    }
-
-    /* Subtitle */
-    .subtitle {
-      margin-top: 20px;
-      font-size: 18px;
-      opacity: 0.9;
-    }
-
-    /* Description */
-    .desc {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.8;
-    }
-
-    /* Button */
-    .hero-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 28px;
-      background: linear-gradient(135deg, #ff9800, #ffb74d);
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .hero-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(255, 152, 0, 0.4);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
+    .corporate-hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
 
     .hero-content {
-      max-width: 1200px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 0 2rem;
       text-align: center;
-      position: relative;
       z-index: 2;
+      position: relative;
       animation: fadeInHero 1.5s ease-out;
     }
-
-    .hero-h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-      animation: slideUpHero 1s 0.3s both ease-out;
-    }
-
-    .hero-lead {
-      font-size: 1.25rem;
-      opacity: 0.95;
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.6;
-      animation: slideUpHero 1s 0.6s both ease-out;
-    }
-
-    .cta-group {
-      animation: slideUpHero 1s 0.9s both ease-out;
-    }
-
-    /* Animations */
 
     @keyframes fadeInHero {
       from {
@@ -181,6 +87,10 @@
       }
     }
 
+    .hero-h1 {
+      animation: slideUpHero 1s 0.3s both ease-out;
+    }
+
     @keyframes slideUpHero {
       from {
         opacity: 0;
@@ -192,72 +102,642 @@
         transform: translateY(0);
       }
     }
+
+    .hero-lead {
+      animation: slideUpHero 1s 0.6s both ease-out;
+    }
+
+    .cta-group {
+      animation: slideUpHero 1s 0.9s both ease-out;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-lead {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--corporate-accent);
+      color: white;
+      border: none;
+      padding: 1.25rem 3rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 1.25rem 3rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--corporate-primary);
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-alt {
+      background: var(--corporate-surface);
+    }
+
+    .section-h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--corporate-primary);
+      font-weight: 700;
+      position: relative;
+    }
+
+    .section-h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--corporate-accent), transparent);
+    }
+
+    /* Services Cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: var(--corporate-surface);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--corporate-border);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--corporate-accent);
+    }
+
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+
+      /* Fallback color (important) */
+      color: var(--corporate-accent);
+
+      /* Gradient */
+      background: linear-gradient(135deg, var(--corporate-accent), #fb923c);
+
+      /* Cross-browser support */
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .service-card h3 {
+      color: var(--corporate-primary);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--corporate-muted);
+      line-height: 1.7;
+    }
+
+    /* Team */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .team-member {
+      text-align: center;
+      background: var(--corporate-surface);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--corporate-border);
+      transition: all 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 4px solid var(--corporate-accent);
+    }
+
+    .team-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--corporate-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-role {
+      color: var(--corporate-accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      color: var(--corporate-muted);
+      line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: linear-gradient(135deg, var(--corporate-primary) 0%, #1e40af 100%);
+      color: white;
+      padding: 80px 2rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      opacity: 0.9;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--corporate-accent), #ea580c);
+      color: white;
+      text-align: center;
+      padding: 80px 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.1;
+    }
+
+    .cta-h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-text {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+    }
+
+    /* Animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section {
+        padding: 60px 1.5rem;
+      }
+
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    .founder-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .founder-image {
+      height: 100%;
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 🔥 full height match */
+      border-radius: 20px;
+    }
+
+    .founder-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .team-name {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .team-role {
+      font-size: 16px;
+      color: #ff6a00;
+      margin-bottom: 15px;
+    }
+
+    .team-bio {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      color: #444;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .founder-container {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-image img {
+        height: 350px;
+      }
+    }
+    
   </style>
+</head>
 
+<body>
 
-  <!-- MACHINES -->
-  <section class="section">
-
-
-
-    <div class="machining-container">
-      <div class="machining-text">
-        <h3 class="sub-title">
-          <span class="arrow">➤</span> Machining & Bar Cutting Facilities
-        </h3>
-        <ul class="cap-list">
-          <li>1.CNC Turning machine: Jober xl 200mm & Lm 200mm Dia chuck between center 400mm, Make: Ace micromatic Mfg
-            year: 2018.</li>
-          <li>2.CNC Turning Machine : LMW Smart turn 165 mm ChuckDia</li>
-          <li>3.VMC Machines : Agma make Size 1600X700x600mm</li>
-          <li>4.Bar Cutting Machines : 400mm dia cutting Capacity.</li>
-          <li>5. Nos producing high-quality and precision components.</li>
-        </ul>
-      </div>
-      <div class="machining-image">
-        <img src="image/in.png" alt="Machining & Bar Cutting Facilities">
-      </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo-link">
+      <div class="logo"><img src="image/download.svg" alt="GLOBSI India"></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="inhouse.html" class="nav-link">In-house</a></li>
+      <li><a href="csr.html" class="nav-link">CSR</a></li>
+      <li><a href="why.html" class="nav-link">Why GLOBSI</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="awards.html" class="nav-link">Awards</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
     </div>
+  </header>
 
-
-    <h3><span class="arrow">➤</span> Heat Treatment Unit
-    </h3>
-
-    <div class="machining-container">
-      <div class="machining-text">
-        <h3 class="sub-title">Roller Hearth Furnace:</h3>
-        <p>Have a quenching speed of less than 25 seconds. It is also designed to cater to customer requirements for the
-          heat treatment of round bars up to 250 mm in diameter and 6.5 meters in length.</p>
-        <p><strong>Specification & Description -</strong><br>No. of Furnaces: 1</p>
-      </div>
-      <div class="machining-image">
-        <img src="image/in2.png" alt="Roller Hearth Furnace">
-      </div>
+  <!-- HERO SECTION -->
+  <section class="corporate-hero fade-in-up">
+    <div class="hero-video">
+      <video autoplay loop muted playsinline preload="auto"
+        poster="https://png.pngtree.com/png-clipart/20241127/original/pngtree-vector-orange-world-map-png-image_17333258.png">
+        <div class="overlay"></div>
     </div>
+    <div class="hero-content">
+      <h1 class="hero-h1">A Premium Trading House for Tool Steels, High-Performance Alloys & Global Sourcing</h1>
+      <p class="hero-lead">Delivering precision materials backed by in-house machining, heat treatment & strategic
+        procurement</p>
 
-    <div class="machining-container">
-      <div class="machining-text">
-        <h3><span class="arrow">➤</span> Heat Treatment Unit
-        </h3>
-        <ul class="cap-list">
-          <li>
-            Bogie Hearth Furnace:</li>
-          <p>Wire rods, components and complex shapes in bulk quantities are heat-treated</p>
-          <p>at this facility</p>
-          <p>Specification & Description-</p>
-          <p>No. of Furnaces 2</p>
-          <p>Furnace type Bogie Hearth type</p>
-        </ul>
-      </div>
-      <div class="machining-image">
-        <img src="image/in3.png" alt="Machining & Bar Cutting Facilities">
+      <!-- CTAs -->
+      <div class="cta-group">
+        <a href="contact.html" class="btn-primary">Get Quote Now</a>
+        <a href="services.html" class="btn-secondary">View Capabilities</a>
       </div>
     </div>
   </section>
 
+  <!-- SERVICES -->
+  <section class="section fade-in-up why-images-section">
+    <h2 class="section-h2">Our Core Verticals</h2>
+    <div class="why-images-grid image-with-text-grid">
+      <div class="image-text-item">
+        <div class="image-container">
+          <img
+            src="https://bc-user-uploads.brandcrowd.com/public/media-Production/d3d574b8-9cc7-4050-be3a-48ef6714850c/7e8e6aa7-66b5-46b8-b4a4-6750d64a3ceb_2x"
+            alt="Why Choose GLOBSI 1">
+        </div>
+        <div class="text-container">
+          <h3>Advanced Materials</h3>
+          <p>Premium tool steels and performance alloys from global brands under one roof - ensuring quality, MOQ
+            flexibility, and reliable ex-stock delivery.</p>
+        </div>
+      </div>
+      <div class="image-text-item">
+        <div class="image-container">
+          <img
+            src="https://bc-user-uploads.brandcrowd.com/public/media-Production/d3d574b8-9cc7-4050-be3a-48ef6714850c/742ed74a-13d2-479c-97eb-f4951356a135_2x"
+            alt="Why Choose GLOBSI 2">
+        </div>
+        <div class="text-container">
+          <h3>Global & Local Sourcing</h3>
+          <p>End-to-end sourcing solutions through a global network - ensuring reliable suppliers, cost efficiency, and
+            certified quality standards.</p>
+        </div>
+      </div>
+      <div class="image-text-item">
+        <div class="image-container">
+          <img src="https://api.orcalean.com/api/file/1748877823967.jpg" alt="Why Choose GLOBSI 3">
+        </div>
+        <div class="text-container">
+          <h3>Integrated Manufacturing</h3>
+          <p>World-class in-house heat treatment, CNC machining, and bar cutting up to 430 mm—delivering precision,
+            flexibility, and fast turnaround.</p>
+        </div>
+      </div>
+  </section>
 
+  <section class="section fade-in-up">
+    <h2 class="section-h2">Our Core Capabilities</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="image/home1.png" alt="Tool & Die Steel Bars" class="service-image">
+        <h3>Tool & Die Steel Bars</h3>
+        <p>High-strength tool steel bars for precision tooling and wear resistance.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="image/home3.png" alt="Beryllium Copper" class="service-image">
+        <h3>Beryllium Copper</h3>
+        <p>High-performance alloy with excellent strength, conductivity, and corrosion resistance.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="image/home4.png" alt="Inconel Alloys" class="service-image">
+        <h3>Inconel Alloys</h3>
+        <p>Heat-resistant alloys designed for extreme temperature and corrosive environments.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="image/home5.png" alt="Copper & Brass Rods/Tubes" class="service-image">
+        <h3>Copper & Brass Rods/Tubes</h3>
+        <p>High-quality rods and tubes with superior conductivity and machinability.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="image/home6.png" alt="Corrugated & Wooden Boxes" class="service-image">
+        <h3>Corrugated & Wooden Boxes</h3>
+        <p>Strong and reliable packaging solutions for safe storage and transportation.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="image/home7.png" alt="Cutting Tools" class="service-image">
+        <h3>Cutting Tools</h3>
+        <p>Precision-engineered for accuracy, durability, and high-performance machining.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="https://www.rallyprecision.com/wp-content/uploads/2020/07/cnc-machining-parts.jpg"
+          alt="Machined Parts" class="service-image">
+        <h3>Precision Machined Parts</h3>
+        <p>CNC turned, milled, and ground components with micron-level tolerances. Full traceability and
+          certification.
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="https://www.motp.co.jp/en/wp-content/uploads/2021/09/moto-hp-otcg-team.jpg" alt="OCTG Products"
+          class="service-image">
+        <h3>OCTG Products</h3>
+        <p>Premium API grade OCTG pipes, couplings, and accessories for oil & gas applications.</p>
+      </div>
+      <div class="service-card">
+        <img
+          src="https://static.wixstatic.com/media/7a836f_bc5fb6feb43442cf94f034a943bd9a56~mv2.jpg/v1/fill/w_280,h_280,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cold%20Forging.jpg"
+          alt="Forged Parts" class="service-image">
+        <h3>Forged Components</h3>
+        <p>Open die and closed die forgings up to 10 tons. Heat treated and machined to specification.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://salamanderfabs.com/wp-content/uploads/2022/06/shutterstock_581436649-1024x683.jpg"
+          alt="Sheet Metal" class="service-image">
+        <h3>Sheet Metal Fabrication</h3>
+        <p>Laser cut, bent, and welded assemblies. Powder coated and assembly ready.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnHt6UHs9m_IB9xP8hdQMd5Une5u1dFToWMg&s"
+          alt="Castings" class="service-image">
+        <h3>Investment Castings</h3>
+        <p>Lost wax precision castings in steel, stainless, and super alloys. Complex geometries.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://4.imimg.com/data4/VD/RJ/MY-7015655/plastic-molded-components-500x500.jpg" alt="Plastic Parts"
+          class="service-image">
+        <h3>Plastic Molded Parts</h3>
+        <p>Injection molded engineering plastics including PEEK, nylon, and polycarbonate.</p>
+      </div>
+      <div class="service-card">
+        <img
+          src="https://res.cloudinary.com/utidinary/image/upload/v1695069984/FY22-NTI-Mooresville-CNC-Employer-ROUSH-YATES-ENGINES-5DSR0384-XL.jpg"
+          alt="Non-Ferrous" class="service-image">
+        <h3>Non-Ferrous Machining</h3>
+        <p>Brass, bronze, copper, and aluminum precision components.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://lirp.cdn-website.com/588100f1/dms3rep/multi/opt/slipping_transmission-scaled-1920w.jpeg"
+          alt="Gear Components" class="service-image">
+        <h3>Gearbox Components</h3>
+        <p>Gears, shafts, and housings for industrial transmissions. Case hardened and ground.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://5f9c5ca2.delivery.rocketcdn.me/wp-content/uploads/2021/06/metal-dry-bearing-bushing.jpeg"
+          alt="Carbon Bushings" class="service-image">
+        <h3>Carbon Bushings</h3>
+        <p>High-load self-lubricating carbon graphite bushings and bearings.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- TEAM -->
+  <section class="section section-alt fade-in-up">
+    <h2 class="section-h2">Founder Spotlight</h2>
 
+    <div class="founder-container">
+
+      <!-- LEFT SIDE IMAGE -->
+      <div class="founder-image">
+        <img src="image/home8.png" alt="Ved R Tiwari">
+      </div>
+
+      <!-- RIGHT SIDE CONTENT -->
+      <div class="founder-content">
+        <h3 class="team-name">Mr. Ved R. Tiwari</h3>
+        <p class="team-role">Founder & CEO, GLOBSI</p>
+
+        <p class="team-bio">
+          A seasoned global leader with over 27 years of experience in sourcing, procurement, and supply chain
+          management.
+          He has held senior leadership and CXO-level roles at SKF, General Motors, Honda, and Kirloskar.
+        </p>
+
+        <p class="team-bio">
+          His expertise, global network, and execution-driven approach form the foundation of GLOBSI’s commitment to
+          delivering high-quality, cost-effective, and reliable sourcing & supply solutions.
+        </p>
+
+        <p class="team-bio">
+          Backed by <strong>strategic business partners across India and Europe</strong> and a high-calibre professional
+          team for
+          <strong>Sourcing and Supplier Quality Assurance</strong>, GLOBSI combines global reach with strong execution
+          to deliver
+          <strong>consistent value across all business verticals.</strong>
+        </p>
+
+        <p class="team-bio">
+          “At GLOBSI, we go beyond sourcing - we deliver reliability, precision, and long-term value to our customers
+          worldwide.” </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner fade-in-up" id="final-cta">
+    <h2 class="cta-h2">Ready to Elevate Your Supply Chain?</h2>
+    <p class="cta-text">Join industry leaders who trust GLOBSI for mission-critical materials and engineering
+      solutions.
+    </p>
+    <div class="cta-group">
+      <a href="contact.html" class="btn-primary" style="background: var(--white); color: var(--corporate-accent);">Get
+        Your Quote Today</a>
+      <a href="services.html" class="btn-secondary" style="border-color: var(--white);">View Our Capabilities</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section fade-in-up" id="about">
+    <div class="contact-grid">
+      <div class="info">
+        <h2 style="color: var(--dark-blue); margin-bottom: 2rem;">About GLOBSI India</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+          GLOBSI India is India's premier engineering materials trading house with in-house manufacturing
+          capabilities.
+          With 27+ years of global purchasing leadership, we deliver premium tool steels, alloys, and precision
+          components
+          to the world's most demanding industries.
+        </p>
+        <div
+          style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">27+</div>
+            <div>Years Experience</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">150+</div>
+            <div>Global Partners</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">99.8%</div>
+            <div>On-Time Delivery</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="image/homehero.png" alt="GLOBSI Operations"
+          style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (standard) -->
   <footer class="footer">
     <div class="footer-container">
 
@@ -324,8 +804,47 @@
 
       <path
         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 1.181 1 0020.885 3.488" />
-    </svg></a>\n\n
-  <script src="js/script.js"></script>
+    </svg>
+  </a>
+
+  <script>
+    // Corporate animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 100);
+    });
+
+    // FIXED: Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function () {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+
 </body>
 
 </html>
