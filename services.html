@@ -73,6 +73,134 @@
       transform: translateY(0);
     }
   }
+   .section {
+      padding: 80px 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-alt {
+      background: var(--corporate-surface);
+    }
+
+    .section-h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--corporate-primary);
+      font-weight: 700;
+      position: relative;
+    }
+
+    .section-h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--corporate-accent), transparent);
+    }
+
+    /* Services Cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: var(--corporate-surface);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--corporate-border);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--corporate-accent);
+    }
+
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+
+      /* Fallback color (important) */
+      color: var(--corporate-accent);
+
+      /* Gradient */
+      background: linear-gradient(135deg, var(--corporate-accent), #fb923c);
+
+      /* Cross-browser support */
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .service-card h3 {
+      color: var(--corporate-primary);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--corporate-muted);
+      line-height: 1.7;
+    }
+    .service-card {
+  border-radius: 16px;
+  overflow: hidden; /* 🔥 image chipak jayegi */
+  background: #fff;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px; /* adjust as needed */
+  object-fit: cover; /* 🔥 full fit without distortion */
+  display: block;
+}
+
+.service-card h3,
+.service-card p {
+  padding: 15px;
+}
+.service-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* IMAGE FIX */
+.service-image {
+  width: 100%;
+  height: 220px;        /* 👈 perfect balanced height */
+  object-fit: cover;    /* 👈 image stretch nahi hogi */
+  display: block;
+}
+
+/* TEXT SPACING */
+.service-card h3 {
+  padding: 15px 15px 5px;
+  font-size: 18px;
+}
+
+.service-card p {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
 </style>
 
 <body>
@@ -130,231 +258,106 @@
 
 
   <!-- PRODUCT LIST -->
-  <section class="section center-section">
-
-    <h2 class="section-title">Products & Capabilities</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <img src="https://www.motp.co.jp/en/wp-content/uploads/2021/09/moto-hp-otcg-team.jpg" alt="OCTG Products">
-        <div class="card-content">
-          <h3>OCTG Products</h3>
-        </div>
+    <section class="section fade-in-up">
+    <h2 class="section-h2">Our Core Capabilities</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="image/home1.png" alt="Tool & Die Steel Bars" class="service-image">
+        <h3>Tool & Die Steel Bars</h3>
+        <p>High-strength tool steel bars for precision tooling and wear resistance.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://www.theengineerspost.com/wp-content/uploads/2020/03/metal-casting-process.jpg" alt="Castings">
-        <div class="card-content">
-          <h3>Castings</h3>
-        </div>
+      <div class="service-card">
+        <img src="image/home3.png" alt="Beryllium Copper" class="service-image">
+        <h3>Beryllium Copper</h3>
+        <p>High-performance alloy with excellent strength, conductivity, and corrosion resistance.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2TmHY4UndXCqNMKusPzFLlIwkiDatgot7hQ&s"
-          alt="Raw Materials">
-        <div class="card-content">
-          <h3>Raw Materials, Alloy, SS, Duplex</h3>
-        </div>
+      <div class="service-card">
+        <img src="image/home4.png" alt="Inconel Alloys" class="service-image">
+        <h3>Inconel Alloys</h3>
+        <p>Heat-resistant alloys designed for extreme temperature and corrosive environments.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://www.silvercrown.in/imgs/products/large/cnc-machined-components-suppliers.jpg"
-          alt="Machined Parts">
-        <div class="card-content">
-          <h3>Machined Parts</h3>
-        </div>
+      <div class="service-card">
+        <img src="image/home5.png" alt="Copper & Brass Rods/Tubes" class="service-image">
+        <h3>Copper & Brass Rods/Tubes</h3>
+        <p>High-quality rods and tubes with superior conductivity and machinability.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://web.tradekorea.com/upload_file2/sell/62/S00068762/COLD_FORGING_PARTS_FOR_AUTOMOBILE.JPG"
-          alt="Forged Parts">
-        <div class="card-content">
-          <h3>Forged Parts</h3>
-        </div>
+      <div class="service-card">
+        <img src="image/home6.png" alt="Corrugated & Wooden Boxes" class="service-image">
+        <h3>Corrugated & Wooden Boxes</h3>
+        <p>Strong and reliable packaging solutions for safe storage and transportation.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://nargesa.com/sites/default/files/a18-cc60-nargesa.png" alt="CNC Bend Pipe Items">
-        <div class="card-content">
-          <h3>CNC Bend Pipe Items</h3>
-        </div>
+      <div class="service-card">
+        <img src="image/home7.png" alt="Cutting Tools" class="service-image">
+        <h3>Cutting Tools</h3>
+        <p>Precision-engineered for accuracy, durability, and high-performance machining.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://www.sheetmetalarticle.com/assets/images/products/precision-sheet-metal-components.jpg"
-          alt="Sheet Metal Parts">
-        <div class="card-content">
-          <h3>Sheet Metal Parts</h3>
-        </div>
+      <div class="service-card">
+        <img src="https://www.rallyprecision.com/wp-content/uploads/2020/07/cnc-machining-parts.jpg"
+          alt="Machined Parts" class="service-image">
+        <h3>Precision Machined Parts</h3>
+        <p>CNC turned, milled, and ground components with micron-level tolerances. Full traceability and
+          certification.
+        </p>
       </div>
-
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqZE7xueCbSs4nhXjsA6gbp1j9nWTpeYZcCw&s"
-          alt="Gear Boxes & Components">
-        <div class="card-content">
-          <h3>Gear Boxes & Components</h3>
-        </div>
+      <div class="service-card">
+        <img src="https://www.motp.co.jp/en/wp-content/uploads/2021/09/moto-hp-otcg-team.jpg" alt="OCTG Products"
+          class="service-image">
+        <h3>OCTG Products</h3>
+        <p>Premium API grade OCTG pipes, couplings, and accessories for oil & gas applications.</p>
       </div>
-
-      <div class="card">
+      <div class="service-card">
         <img
-          src="https://bc-user-uploads.brandcrowd.com/public/media-Production/d3d574b8-9cc7-4050-be3a-48ef6714850c/1a038113-7be2-43bb-9262-b8c544f46894_2x"
-          alt="Capital Items & Spares">
-        <div class="card-content">
-          <h3>Capital Items & Spares</h3>
-        </div>
+          src="https://static.wixstatic.com/media/7a836f_bc5fb6feb43442cf94f034a943bd9a56~mv2.jpg/v1/fill/w_280,h_280,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cold%20Forging.jpg"
+          alt="Forged Parts" class="service-image">
+        <h3>Forged Components</h3>
+        <p>Open die and closed die forgings up to 10 tons. Heat treated and machined to specification.</p>
       </div>
-
-      <div class="card">
+      <div class="service-card">
+        <img src="https://salamanderfabs.com/wp-content/uploads/2022/06/shutterstock_581436649-1024x683.jpg"
+          alt="Sheet Metal" class="service-image">
+        <h3>Sheet Metal Fabrication</h3>
+        <p>Laser cut, bent, and welded assemblies. Powder coated and assembly ready.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnHt6UHs9m_IB9xP8hdQMd5Une5u1dFToWMg&s"
+          alt="Castings" class="service-image">
+        <h3>Investment Castings</h3>
+        <p>Lost wax precision castings in steel, stainless, and super alloys. Complex geometries.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://4.imimg.com/data4/VD/RJ/MY-7015655/plastic-molded-components-500x500.jpg" alt="Plastic Parts"
+          class="service-image">
+        <h3>Plastic Molded Parts</h3>
+        <p>Injection molded engineering plastics including PEEK, nylon, and polycarbonate.</p>
+      </div>
+      <div class="service-card">
         <img
-          src="https://static.wixstatic.com/media/9b8fc4_028721b87d4e476b9f8dd939a59d8601~mv2.png/v1/fill/w_568,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9b8fc4_028721b87d4e476b9f8dd939a59d8601~mv2.png"
-          alt="Defence & Aerospace Parts">
-        <div class="card-content">
-          <h3>Defence & Aerospace Parts</h3>
-        </div>
+          src="https://res.cloudinary.com/utidinary/image/upload/v1695069984/FY22-NTI-Mooresville-CNC-Employer-ROUSH-YATES-ENGINES-5DSR0384-XL.jpg"
+          alt="Non-Ferrous" class="service-image">
+        <h3>Non-Ferrous Machining</h3>
+        <p>Brass, bronze, copper, and aluminum precision components.</p>
       </div>
-
-      <div class="card">
-        <img src="https://static.toiimg.com/thumb/msid-120659181,width-1280,height-720,resizemode-4/120659181.jpg"
-          alt="Electronics">
-        <div class="card-content">
-          <h3>Electronics</h3>
-        </div>
+      <div class="service-card">
+        <img src="https://lirp.cdn-website.com/588100f1/dms3rep/multi/opt/slipping_transmission-scaled-1920w.jpeg"
+          alt="Gear Components" class="service-image">
+        <h3>Gearbox Components</h3>
+        <p>Gears, shafts, and housings for industrial transmissions. Case hardened and ground.</p>
       </div>
-
-      <div class="card">
-        <img
-          src="https://thumbs.dreamstime.com/b/open-hard-drive-computer-technology-open-hard-drive-computer-technology-410510053.jpg"
-          alt="Drive Technology Items">
-        <div class="card-content">
-          <h3>Drive Technology Items</h3>
-        </div>
+      <div class="service-card">
+        <img src="https://5f9c5ca2.delivery.rocketcdn.me/wp-content/uploads/2021/06/metal-dry-bearing-bushing.jpeg"
+          alt="Carbon Bushings" class="service-image">
+        <h3>Carbon Bushings</h3>
+        <p>High-load self-lubricating carbon graphite bushings and bearings.</p>
       </div>
-
-      <div class="card">
-        <img
-          src="https://www.a1metallics.com/wp-content/uploads/2025/04/Brass-hot-stamping-Brass-Hot-forged-parts-and-components.png"
-          alt="Brass & Bronze Parts">
-        <div class="card-content">
-          <h3>Brass & Bronze Parts</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://images.jdmagicbox.com/v2/comp/mumbai/n4/022pxx22.xx22.200116205602.d2n4/catalogue/carbon-products-india-kalbadevi-mumbai-oil-seal-manufacturers-2xmmym3isz.jpg"
-          alt="Carbon Bush Items">
-        <div class="card-content">
-          <h3>Carbon Bush Items</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://www.plasticsengineering.org/wp-content/uploads/2023/12/InjectionMolding1-1200x754.jpg"
-          alt="Plastic Molded Parts">
-        <div class="card-content">
-          <h3>Plastic Molded Parts</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGQ0Y_0glOf1hlu2fBgl_nevlfHQuRHnSDng&s"
-          alt="Any Other Item">
-        <div class="card-content">
-          <h3>Any Other Item</h3>
-        </div>
-      </div>
-
     </div>
   </section>
-
-  <!-- DETAILED SERVICES -->
-  <section class="section">
-
-    <h2 class="section-title">
-      <span class="arrow"></span> Detailed Capabilities
-    </h2>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 1. Metals & Alloys - Inconel Alloys, Alloy Steels, Stainless Steel, Tool & Die
-      Steels, Aluminum, Brass, Copper
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 2. Castings & Forgings
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 3. Machined Components
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 4. Fasteners & Fabricated Parts
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 5. Engineering Components
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 6. Automotive & OEM Supplies
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 7. Oil & Gas Products-Drill pipes, Casings, Tubing, Couplings, Line pipes & Tubes
-    </h3>
-    <ul class="cap-list">
-    </ul>
-
-    <h3 class="sub-title">
-      <span class="arrow">➤</span> 8. Steel Raw Materials-Tubes, Bars, Wires, Coils, Pipes
-      <ul class="cap-list">
-      </ul>
-
-      <h3 class="sub-title">
-        <span class="arrow">➤</span> 9. Plastic molded components
-        <ul class="cap-list">
-        </ul>
-
-        <h3 class="sub-title">
-          <span class="arrow">➤</span> 10. Defence & Aerospace items
-          <ul class="cap-list">
-          </ul>
-
-          <h3 class="sub-title">
-            <span class="arrow">➤</span> 11. Capital equipments
-            <ul class="cap-list">
-            </ul>
-
-            <h3 class="sub-title">
-              <span class="arrow">➤</span> 12. Consumables
-              <ul class="cap-list">
-              </ul>
-
-              <h3 class="sub-title">
-                <span class="arrow">➤</span> 14. Gear Boxes and Drives Components
-                <ul class="cap-list">
-                </ul>
-
-                <h3 class="sub-title">
-                  <span class="arrow">➤</span>15. Packaging & Packing Materials and many more.
-                  <ul class="cap-list">
-                  </ul>
-
-  </section>
+  
   <!-- SEO TEXT -->
   <section class="section center-section">
 
