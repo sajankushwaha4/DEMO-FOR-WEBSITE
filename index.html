@@ -406,6 +406,61 @@
         font-size: 1.8rem;
       }
     }
+
+    .founder-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .founder-image {
+      height: 100%;
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 🔥 full height match */
+      border-radius: 20px;
+    }
+
+    .founder-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .team-name {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .team-role {
+      font-size: 16px;
+      color: #ff6a00;
+      margin-bottom: 15px;
+    }
+
+    .team-bio {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      color: #444;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .founder-container {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-image img {
+        height: 350px;
+      }
+    }
   </style>
 </head>
 
@@ -439,7 +494,8 @@
     </div>
     <div class="hero-content">
       <h1 class="hero-h1">A Premium Trading House for Tool Steels, High-Performance Alloys & Global Sourcing</h1>
-      <p class="hero-lead">Delivering precision materials backed by in-house machining, heat treatment & strategic procurement</p>
+      <p class="hero-lead">Delivering precision materials backed by in-house machining, heat treatment & strategic
+        procurement</p>
 
       <!-- CTAs -->
       <div class="cta-group">
@@ -461,7 +517,8 @@
         </div>
         <div class="text-container">
           <h3>Advanced Materials</h3>
-          <p>Premium tool steels and performance alloys from global brands under one roof - ensuring quality, MOQ flexibility, and reliable ex-stock delivery.</p>
+          <p>Premium tool steels and performance alloys from global brands under one roof - ensuring quality, MOQ
+            flexibility, and reliable ex-stock delivery.</p>
         </div>
       </div>
       <div class="image-text-item">
@@ -472,7 +529,8 @@
         </div>
         <div class="text-container">
           <h3>Global & Local Sourcing</h3>
-          <p>End-to-end sourcing solutions through a global network - ensuring reliable suppliers, cost efficiency, and certified quality standards.</p>
+          <p>End-to-end sourcing solutions through a global network - ensuring reliable suppliers, cost efficiency, and
+            certified quality standards.</p>
         </div>
       </div>
       <div class="image-text-item">
@@ -481,7 +539,8 @@
         </div>
         <div class="text-container">
           <h3>Integrated Manufacturing</h3>
-          <p>World-class in-house heat treatment, CNC machining, and bar cutting up to 430 mm—delivering precision, flexibility, and fast turnaround.</p>
+          <p>World-class in-house heat treatment, CNC machining, and bar cutting up to 430 mm—delivering precision,
+            flexibility, and fast turnaround.</p>
         </div>
       </div>
   </section>
@@ -490,43 +549,37 @@
     <h2 class="section-h2">Our Core Capabilities</h2>
     <div class="services-grid">
       <div class="service-card">
-        <img src="image/home1.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home1.png" alt="Machined Parts" class="service-image">
         <h3>Tool & Die Steel Bars</h3>
         <p>High-strength tool steel bars for precision tooling and wear resistance.
         </p>
       </div>
       <div class="service-card">
-        <img src="image/home3.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home3.png" alt="Machined Parts" class="service-image">
         <h3>Beryllium Copper</h3>
         <p>High-performance alloy with excellent strength, conductivity, and corrosion resistance.
         </p>
       </div>
       <div class="service-card">
-        <img src="image/home4.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home4.png" alt="Machined Parts" class="service-image">
         <h3>Inconel Alloys</h3>
         <p>Heat-resistant alloys designed for extreme temperature and corrosive environments.
         </p>
       </div>
       <div class="service-card">
-        <img src="image/home5.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home5.png" alt="Machined Parts" class="service-image">
         <h3>Copper & Brass Rods/Tubes</h3>
         <p>High-quality rods and tubes with superior conductivity and machinability.
         </p>
       </div>
       <div class="service-card">
-        <img src="image/home6.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home6.png" alt="Machined Parts" class="service-image">
         <h3>Corrugated & Wooden Boxes</h3>
         <p>Strong and reliable packaging solutions for safe storage and transportation.
         </p>
       </div>
       <div class="service-card">
-        <img src="image/home7.png"
-          alt="Machined Parts" class="service-image">
+        <img src="image/home7.png" alt="Machined Parts" class="service-image">
         <h3>Cutting Tools</h3>
         <p>Precision-engineered for accuracy, durability, and high-performance machining.
         </p>
@@ -591,32 +644,47 @@
       </div>
     </div>
   </section>
-  
+
   <!-- TEAM -->
   <section class="section section-alt fade-in-up">
-    <h2 class="section-h2">Leadership Excellence</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <img src="image/Ved.png" alt="Ved R Tiwari" class="team-photo">
-        <h3 class="team-name">Ved R Tiwari</h3>
-        <p class="team-role">Founder & CEO</p>
-        <p class="team-bio">27+ years global purchasing leadership at SKF, Honda, Kirloskar. B-Tech Mechanical, MBA
-          Marketing.</p>
+    <h2 class="section-h2">Founder Spotlight</h2>
+
+    <div class="founder-container">
+
+      <!-- LEFT SIDE IMAGE -->
+      <div class="founder-image">
+        <img src="image/home8.png" alt="Ved R Tiwari">
       </div>
-      <div class="team-member">
-        <img src="image/Dinesh.png" alt="Dinesh Sinha" class="team-photo">
-        <h3 class="team-name">Dinesh Sinha</h3>
-        <p class="team-role">CTO & CMO (USA)</p>
-        <p class="team-bio">39+ years experience. Ex-President Jindal Saw, TATA. IIT Metallurgist with extensive
-          manufacturing expertise.</p>
+
+      <!-- RIGHT SIDE CONTENT -->
+      <div class="founder-content">
+        <h3 class="team-name">Mr. Ved R. Tiwari</h3>
+        <p class="team-role">Founder & CEO, GLOBSI</p>
+
+        <p class="team-bio">
+          A seasoned global leader with over 27 years of experience in sourcing, procurement, and supply chain
+          management.
+          He has held senior leadership and CXO-level roles at SKF, General Motors, Honda, and Kirloskar.
+        </p>
+
+        <p class="team-bio">
+          His expertise, global network, and execution-driven approach form the foundation of GLOBSI’s commitment to
+          delivering high-quality, cost-effective, and reliable sourcing & supply solutions.
+        </p>
+
+        <p class="team-bio">
+          Backed by <strong>strategic business partners across India and Europe</strong> and a high-calibre professional
+          team for
+          <strong>Sourcing and Supplier Quality Assurance</strong>, GLOBSI combines global reach with strong execution
+          to deliver
+          <strong>consistent value across all business verticals.</strong>
+        </p>
+
+        <p class="team-bio">
+          “At GLOBSI, we go beyond sourcing - we deliver reliability, precision, and long-term value to our customers
+          worldwide.” </p>
       </div>
-      <div class="team-member">
-        <img src="image/Flavio.png" alt="Flavio Artico" class="team-photo">
-        <h3 class="team-name">Flavio Artico</h3>
-        <p class="team-role">CMO (Europe)</p>
-        <p class="team-bio">40+ years, Ex-Global Purchasing Director SKF Group. Deep expertise in international supply
-          chains.</p>
-      </div>
+
     </div>
   </section>
 
@@ -627,7 +695,7 @@
       solutions.
     </p>
     <div class="cta-group">
-     <a href="contact.html" class="btn-primary" style="background: var(--white); color: var(--corporate-accent);">Get
+      <a href="contact.html" class="btn-primary" style="background: var(--white); color: var(--corporate-accent);">Get
         Your Quote Today</a>
       <a href="services.html" class="btn-secondary" style="border-color: var(--white);">View Our Capabilities</a>
     </div>
@@ -777,4 +845,5 @@
   </script>
 
 </body>
+
 </html>
