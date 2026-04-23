@@ -1628,3 +1628,41 @@ body.modal-open {
   margin: 0 auto;
   line-height: 1.8;
 }
+  .founder-container {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.founder-image {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;   /* keeps full image visible */
+  border-radius: 12px;   /* optional premium look */
+}
+
+/* Right content */
+.founder-content {
+  flex: 1;
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image img {
+    height: auto;
+  }
+}
